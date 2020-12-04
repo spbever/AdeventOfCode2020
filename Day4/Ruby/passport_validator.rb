@@ -51,4 +51,4 @@ passports.each do |passport|
 end
 
 puts "(Part 1) #{valid_passports} passports with required keys of #{total_processed} passports processed." #256
-puts "(Part 1) #{passports_with_valid_data} passports with valid data of #{total_processed} passports processed." #198
+puts "(Part 2) #{passports_with_valid_data} passports with valid data of #{total_processed} passports processed." #198
