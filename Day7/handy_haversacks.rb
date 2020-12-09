@@ -1,22 +1,21 @@
-color_coded_bags = {}
+COLOR_CODED_BAGS = {}
 data = File.readlines('./input.txt')
 
 data.each do |rule|
   rule_contains = rule.gsub('.','').gsub('bags','').gsub('bag', '').split('contain')
   rule = rule_contains.first.strip
-  color_coded_bags[rule] = {}
+  COLOR_CODED_BAGS[rule] = {}
 
   rule_contains.last.split(',').each do |contain|
     next if contain.include?("no other")
     amount = contain.to_i
     amount ||= 1
     color = contain.gsub(/\d/, '').strip
-    color_coded_bags[rule][color] = amount
+    COLOR_CODED_BAGS[rule][color] = amount
   end
 end
 
 
-COLOR_CODED_BAGS=color_coded_bags
 
 def can_bag_contain_color bag, search_color, stop_list=[]
   return false if stop_list.include? bag
