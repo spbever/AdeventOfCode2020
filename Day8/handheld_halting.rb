@@ -19,7 +19,6 @@ end
 
 
 def process_instruction_set instructions
-  c = 0
   accumulator=0
 
   instructions_processed = []
