@@ -59,7 +59,6 @@ while updated_instruction < instructions.length
   if  instructions[updated_instruction].instruction == 'nop'
     instructions[updated_instruction].instruction = 'jmp'
     part_two_last_index, part_two_accumulator, part_two_finished_instructions = process_instruction_set instructions
-    puts 'fin 2' if part_two_finished_instructions
     break if part_two_finished_instructions
     instructions[updated_instruction].instruction = 'nop'
   elsif  instructions[updated_instruction].instruction == 'jmp'
